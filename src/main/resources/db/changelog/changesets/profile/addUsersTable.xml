@@ -2,8 +2,8 @@
 <databaseChangeLog logicalFilePath="db.changelog-master.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    <changeSet id="createUsersTable" author="dromanov">
-        <createTable schemaName="organization" tableName="users">
+    <changeSet id="addUsersTable" author="dromanov">
+        <createTable schemaName="profile" tableName="users">
             <column name="id" type="INTEGER" autoIncrement="true"/>
             <column name="first_name" type="CHARACTER VARYING"/>
             <column name="last_name" type="CHARACTER VARYING"/>

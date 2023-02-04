@@ -3,7 +3,8 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <include file="/db/changelog/changesets/organization/db.changelog-organization.xml"/>
-    <include file="/db/changelog/changesets/profile/db.changelog-profile.xml"/>
+    <include file="/db/changelog/changesets/profile/addProfileSchema.sql"/>
+    <include file="/db/changelog/changesets/profile/addUsersTable.xml"/>
+    <include file="/db/changelog/changesets/profile/addUsers.sql"/>
 
 </databaseChangeLog>
