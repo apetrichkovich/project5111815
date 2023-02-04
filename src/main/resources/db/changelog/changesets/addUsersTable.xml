@@ -2,9 +2,11 @@
 <databaseChangeLog logicalFilePath="db.changelog-master.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-
-    <include file="/db/changelog/changesets/addOrganizationSchema.sql"/>
-    <include file="/db/changelog/changesets/addUsersTable.xml"/>
-    <include file="/db/changelog/changesets/addUsers.sql"/>
-
+    <changeSet id="createUsersTable" author="dromanov">
+        <createTable schemaName="organization" tableName="users">
+            <column name="id" type="INTEGER" autoIncrement="true"/>
+            <column name="first_name" type="CHARACTER VARYING"/>
+            <column name="last_name" type="CHARACTER VARYING"/>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
