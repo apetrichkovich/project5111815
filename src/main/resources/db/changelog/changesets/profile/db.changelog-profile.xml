@@ -5,6 +5,11 @@
 
     <include file="/db/changelog/changesets/profile/addProfileSchema.sql"/>
     <include file="/db/changelog/changesets/profile/addUsersTable.xml"/>
-    <include file="/db/changelog/changesets/profile/addUsers.sql"/>
 
+    <changeSet id="addDevUsers" author="dromanov" context="dev">
+        <sqlFile path="/db/changelog/changesets/profile/addDevUsers.sql"/>
+    </changeSet>
+    <changeSet id="addPreprodUsers" author="dromanov" context="preprod">
+        <sqlFile path="/db/changelog/changesets/profile/addPreprodUsers.sql"/>
+    </changeSet>
 </databaseChangeLog>
